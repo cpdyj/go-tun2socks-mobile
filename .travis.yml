@@ -35,7 +35,8 @@ before_install:
 install:
   - java -version
   - sudo apt list --installed | grep jdk
-  - sudo apt remove openjdk-11-jdk -y
+  # - sudo apt remove openjdk-11-jdk -y
+  - sudo apt remove default-jdk default-jdk-headless -y
   # - java --version
   - echo "Getting deps"
   - source .travis/install-sdk-ndk

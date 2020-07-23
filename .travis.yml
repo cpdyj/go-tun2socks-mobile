@@ -23,7 +23,7 @@ addons:
     packages:
     - wget
     - unzip
-    - openjdk-8-jdk
+    # - openjdk-8-jdk
 
 before_install:
   # - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt install remove --purge openjdk-*-jdk -y && sudo apt install openjdk-8-jdk -y; fi
@@ -33,7 +33,7 @@ before_install:
 
 install:
   - java --version
-  - sudo apt remove openjdk-11-jdk -y
+  # - sudo apt remove openjdk-11-jdk -y
   - java --version
   - echo "Getting deps"
   - source .travis/install-sdk-ndk

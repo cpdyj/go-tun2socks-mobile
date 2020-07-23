@@ -23,7 +23,7 @@ addons:
     # - openjdk-8-jdk
 
 before_install:
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then apt install remove --purge openjdk-*-jdk -y && apt install openjdk-8-jdk -y; fi
+  - sudo if [ "$TRAVIS_OS_NAME" = "linux" ]; then apt install remove --purge openjdk-*-jdk -y && apt install openjdk-8-jdk -y; fi
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then source .travis/download-sdk-tools-linux; fi
   # - if [ "$TRAVIS_OS_NAME" = "osx" ]; then source .travis/download-sdk-tools-darwin; fi
   # - source .travis/install-sdk-ndk

@@ -46,9 +46,9 @@ script:
   
 deploy:
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
+  api_key: "$API_KEY"
   file: "files.tar.gz"
   skip_cleanup: true
   on:
-    tags: true
+    draft: true
 

@@ -23,10 +23,10 @@ addons:
     packages:
     - wget
     - unzip
-    - openjdk-8-jdk
+    - oracle-java8-installer
 
 before_install:
-  - export PATH="/usr/lib/jvm/java-8-openjdk-amd64/bin/:$PATH"
+  # - export PATH="/usr/lib/jvm/java-8-openjdk-amd64/bin/:$PATH"
   # - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt install remove --purge openjdk-*-jdk -y && sudo apt install openjdk-8-jdk -y; fi
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then source .travis/download-sdk-tools-linux; fi
   # - if [ "$TRAVIS_OS_NAME" = "osx" ]; then source .travis/download-sdk-tools-darwin; fi

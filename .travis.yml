@@ -49,6 +49,5 @@ deploy:
   api_key: "$API_KEY"
   file: "files.tar.gz"
   skip_cleanup: true
-  on:
-    draft: true
+  draft: true
 

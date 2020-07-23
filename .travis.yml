@@ -3,7 +3,7 @@ sudo: required
 language: go
 
 jdk:
-  - openjdk8
+  - oraclejdk8
 
 go:
   - "1.13"

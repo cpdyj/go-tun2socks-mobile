@@ -41,6 +41,7 @@ install:
 script:
   - echo "Building"
   - export
+  - ls $ANDROID_NDK_HOME/ndk-bundle
   # Make android on linux.
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then make android && ls -l build; fi
   # Make both android and ios on osx.

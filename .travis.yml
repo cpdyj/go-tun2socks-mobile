@@ -34,7 +34,7 @@ before_install:
 
 install:
   - java -version
-  # - sudo apt remove openjdk-11-jdk -y
+  - sudo apt remove openjdk-11-jdk -y
   # - java --version
   - echo "Getting deps"
   - source .travis/install-sdk-ndk
@@ -48,9 +48,8 @@ install:
 
 script:
   - echo "Building"
-  - export
-  - ls $ANDROID_HOME/ndk-bundle
-  - ls $ANDROID_NDK_HOME
+  # - ls $ANDROID_HOME/ndk-bundle
+  # - ls $ANDROID_NDK_HOME
   # Make android on linux.
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then make android && ls -l build; fi
   # Make both android and ios on osx.

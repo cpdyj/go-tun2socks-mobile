@@ -42,3 +42,13 @@ script:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then make android && ls -l build; fi
   # Make both android and ios on osx.
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then make && ls -l build; fi
+  - tar -cvzf files.tar.gz ./ 
+  
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "files.tar.gz"
+  skip_cleanup: true
+  on:
+    tags: true
+

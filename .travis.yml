@@ -35,9 +35,12 @@ install:
   - go get golang.org/x/mobile/cmd/gomobile
   - go install golang.org/x/mobile/cmd/gomobile
   - gomobile init
+  - echo "Show Environment"
+  - export
 
 script:
   - echo "Building"
+  - export
   # Make android on linux.
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then make android && ls -l build; fi
   # Make both android and ios on osx.

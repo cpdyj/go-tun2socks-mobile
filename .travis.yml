@@ -24,11 +24,12 @@ addons:
 
 before_install:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then source .travis/download-sdk-tools-linux; fi
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then source .travis/download-sdk-tools-darwin; fi
-  - source .travis/install-sdk-ndk
+  # - if [ "$TRAVIS_OS_NAME" = "osx" ]; then source .travis/download-sdk-tools-darwin; fi
+  # - source .travis/install-sdk-ndk
 
 install:
   - echo "Getting deps"
+  - source .travis/install-sdk-ndk
   - go get -d ./...
   - echo "Installing gomobile"
   - go get golang.org/x/mobile/cmd/gomobile

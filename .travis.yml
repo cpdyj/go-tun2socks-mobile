@@ -34,6 +34,7 @@ before_install:
 
 install:
   - java -version
+  - sudo apt list --installed | grep jdk
   - sudo apt remove openjdk-11-jdk -y
   # - java --version
   - echo "Getting deps"
